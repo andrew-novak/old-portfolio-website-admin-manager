@@ -1,0 +1,21 @@
+{
+  "name": "personal-website-admin-manager",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node index.js",
+    "start:dev": "cross-env NODE_ENV=development node -r dotenv/config index.js"
+  },
+  "author": "Andrew Novak",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "mongoose": "^5.12.3",
+    "yargs-interactive": "^3.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^8.2.0"
+  }
+}
