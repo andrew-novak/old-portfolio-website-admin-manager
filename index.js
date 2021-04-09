@@ -7,6 +7,11 @@ const remove = require("./options/remove");
 
 const MONGO_URL = process.env.PERSONAL_SITE_MONGO_URL;
 
+if (!MONGO_URL) {
+  console.log("PERSONAL_SITE_MONGO_URL envirnment variable not found");
+  process.exit();
+}
+
 mongoose.connect(MONGO_URL, {
   useNewUrlParser: true,
   useFindAndModify: false,
