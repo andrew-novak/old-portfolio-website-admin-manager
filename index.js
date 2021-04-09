@@ -5,10 +5,10 @@ const list = require("./options/list");
 const add = require("./options/add");
 const remove = require("./options/remove");
 
-const MONGO_URL = process.env.PERSONAL_SITE_MONGO_URL;
+const MONGO_URL = process.env.PERSONAL_WEBSITE_MONGO_URL;
 
 if (!MONGO_URL) {
-  console.log("PERSONAL_SITE_MONGO_URL envirnment variable not found");
+  console.log("PERSONAL_WEBSITE_MONGO_URL envirnment variable not found");
   process.exit();
 }
 
