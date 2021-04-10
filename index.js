@@ -5,6 +5,10 @@ const list = require("./options/list");
 const add = require("./options/add");
 const remove = require("./options/remove");
 
+if (process.env.NODE_ENV === "development") {
+  require("dotenv").config();
+}
+
 const MONGO_URL = process.env.PERSONAL_WEBSITE_MONGO_URL;
 
 if (!MONGO_URL) {
