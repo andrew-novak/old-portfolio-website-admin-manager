@@ -7,9 +7,8 @@ const add = require("./options/add");
 const remove = require("./options/remove");
 
 if (process.env.NODE_ENV === "development") {
-  try {
-    fs.existsSync("./.env");
-  } catch (err) {
+  const exists = fs.existsSync("./.env");
+  if (!exists) {
     console.log(".env file does not found");
     process.exit();
   }
